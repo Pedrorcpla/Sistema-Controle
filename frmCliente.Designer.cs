@@ -83,6 +83,138 @@ namespace ProjetoBancoDados
             ((System.ComponentModel.ISupportInitialize)(this.tbClienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // cd_clienteLabel
+            // 
+            cd_clienteLabel.AutoSize = true;
+            cd_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cd_clienteLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            cd_clienteLabel.Location = new System.Drawing.Point(214, 113);
+            cd_clienteLabel.Name = "cd_clienteLabel";
+            cd_clienteLabel.Size = new System.Drawing.Size(63, 20);
+            cd_clienteLabel.TabIndex = 1;
+            cd_clienteLabel.Text = "Código:";
+            // 
+            // nm_clienteLabel
+            // 
+            nm_clienteLabel.AutoSize = true;
+            nm_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nm_clienteLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            nm_clienteLabel.Location = new System.Drawing.Point(222, 143);
+            nm_clienteLabel.Name = "nm_clienteLabel";
+            nm_clienteLabel.Size = new System.Drawing.Size(55, 20);
+            nm_clienteLabel.TabIndex = 3;
+            nm_clienteLabel.Text = "Nome:";
+            // 
+            // ds_enderecoLabel
+            // 
+            ds_enderecoLabel.AutoSize = true;
+            ds_enderecoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            ds_enderecoLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            ds_enderecoLabel.Location = new System.Drawing.Point(195, 173);
+            ds_enderecoLabel.Name = "ds_enderecoLabel";
+            ds_enderecoLabel.Size = new System.Drawing.Size(82, 20);
+            ds_enderecoLabel.TabIndex = 5;
+            ds_enderecoLabel.Text = "Endereço:";
+            // 
+            // nr_enderecoLabel
+            // 
+            nr_enderecoLabel.AutoSize = true;
+            nr_enderecoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nr_enderecoLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            nr_enderecoLabel.Location = new System.Drawing.Point(208, 203);
+            nr_enderecoLabel.Name = "nr_enderecoLabel";
+            nr_enderecoLabel.Size = new System.Drawing.Size(69, 20);
+            nr_enderecoLabel.TabIndex = 7;
+            nr_enderecoLabel.Text = "Número:";
+            // 
+            // nm_bairroLabel
+            // 
+            nm_bairroLabel.AutoSize = true;
+            nm_bairroLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nm_bairroLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            nm_bairroLabel.Location = new System.Drawing.Point(222, 233);
+            nm_bairroLabel.Name = "nm_bairroLabel";
+            nm_bairroLabel.Size = new System.Drawing.Size(55, 20);
+            nm_bairroLabel.TabIndex = 9;
+            nm_bairroLabel.Text = "Bairro:";
+            // 
+            // nm_cidadeLabel
+            // 
+            nm_cidadeLabel.AutoSize = true;
+            nm_cidadeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nm_cidadeLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            nm_cidadeLabel.Location = new System.Drawing.Point(214, 263);
+            nm_cidadeLabel.Name = "nm_cidadeLabel";
+            nm_cidadeLabel.Size = new System.Drawing.Size(63, 20);
+            nm_cidadeLabel.TabIndex = 11;
+            nm_cidadeLabel.Text = "Cidade:";
+            // 
+            // cd_cepLabel
+            // 
+            cd_cepLabel.AutoSize = true;
+            cd_cepLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cd_cepLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            cd_cepLabel.Location = new System.Drawing.Point(232, 295);
+            cd_cepLabel.Name = "cd_cepLabel";
+            cd_cepLabel.Size = new System.Drawing.Size(45, 20);
+            cd_cepLabel.TabIndex = 13;
+            cd_cepLabel.Text = "CEP:";
+            // 
+            // sg_estadoLabel
+            // 
+            sg_estadoLabel.AutoSize = true;
+            sg_estadoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            sg_estadoLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            sg_estadoLabel.Location = new System.Drawing.Point(397, 204);
+            sg_estadoLabel.Name = "sg_estadoLabel";
+            sg_estadoLabel.Size = new System.Drawing.Size(64, 20);
+            sg_estadoLabel.TabIndex = 15;
+            sg_estadoLabel.Text = "Estado:";
+            // 
+            // cd_telefoneLabel
+            // 
+            cd_telefoneLabel.AutoSize = true;
+            cd_telefoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cd_telefoneLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            cd_telefoneLabel.Location = new System.Drawing.Point(202, 326);
+            cd_telefoneLabel.Name = "cd_telefoneLabel";
+            cd_telefoneLabel.Size = new System.Drawing.Size(75, 20);
+            cd_telefoneLabel.TabIndex = 17;
+            cd_telefoneLabel.Text = "Telefone:";
+            // 
+            // cd_cpfLabel
+            // 
+            cd_cpfLabel.AutoSize = true;
+            cd_cpfLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cd_cpfLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            cd_cpfLabel.Location = new System.Drawing.Point(233, 356);
+            cd_cpfLabel.Name = "cd_cpfLabel";
+            cd_cpfLabel.Size = new System.Drawing.Size(44, 20);
+            cd_cpfLabel.TabIndex = 19;
+            cd_cpfLabel.Text = "CPF:";
+            // 
+            // cd_rgLabel
+            // 
+            cd_rgLabel.AutoSize = true;
+            cd_rgLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cd_rgLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            cd_rgLabel.Location = new System.Drawing.Point(239, 386);
+            cd_rgLabel.Name = "cd_rgLabel";
+            cd_rgLabel.Size = new System.Drawing.Size(38, 20);
+            cd_rgLabel.TabIndex = 21;
+            cd_rgLabel.Text = "RG:";
+            // 
+            // ds_emailLabel
+            // 
+            ds_emailLabel.AutoSize = true;
+            ds_emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            ds_emailLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            ds_emailLabel.Location = new System.Drawing.Point(225, 416);
+            ds_emailLabel.Name = "ds_emailLabel";
+            ds_emailLabel.Size = new System.Drawing.Size(52, 20);
+            ds_emailLabel.TabIndex = 23;
+            ds_emailLabel.Text = "Email:";
+            // 
             // cadastroDataSet
             // 
             this.cadastroDataSet.DataSetName = "CadastroDataSet";
@@ -97,16 +229,6 @@ namespace ProjetoBancoDados
             // 
             this.tbClienteTableAdapter.ClearBeforeFill = true;
             // 
-            // cd_clienteLabel
-            // 
-            cd_clienteLabel.AutoSize = true;
-            cd_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cd_clienteLabel.Location = new System.Drawing.Point(214, 113);
-            cd_clienteLabel.Name = "cd_clienteLabel";
-            cd_clienteLabel.Size = new System.Drawing.Size(63, 20);
-            cd_clienteLabel.TabIndex = 1;
-            cd_clienteLabel.Text = "Código:";
-            // 
             // cd_clienteTextBox
             // 
             this.cd_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_cliente", true));
@@ -116,16 +238,6 @@ namespace ProjetoBancoDados
             this.cd_clienteTextBox.Name = "cd_clienteTextBox";
             this.cd_clienteTextBox.Size = new System.Drawing.Size(100, 26);
             this.cd_clienteTextBox.TabIndex = 2;
-            // 
-            // nm_clienteLabel
-            // 
-            nm_clienteLabel.AutoSize = true;
-            nm_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nm_clienteLabel.Location = new System.Drawing.Point(222, 143);
-            nm_clienteLabel.Name = "nm_clienteLabel";
-            nm_clienteLabel.Size = new System.Drawing.Size(55, 20);
-            nm_clienteLabel.TabIndex = 3;
-            nm_clienteLabel.Text = "Nome:";
             // 
             // nm_clienteTextBox
             // 
@@ -137,16 +249,6 @@ namespace ProjetoBancoDados
             this.nm_clienteTextBox.Size = new System.Drawing.Size(317, 26);
             this.nm_clienteTextBox.TabIndex = 4;
             // 
-            // ds_enderecoLabel
-            // 
-            ds_enderecoLabel.AutoSize = true;
-            ds_enderecoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ds_enderecoLabel.Location = new System.Drawing.Point(195, 173);
-            ds_enderecoLabel.Name = "ds_enderecoLabel";
-            ds_enderecoLabel.Size = new System.Drawing.Size(82, 20);
-            ds_enderecoLabel.TabIndex = 5;
-            ds_enderecoLabel.Text = "Endereço:";
-            // 
             // ds_enderecoTextBox
             // 
             this.ds_enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "ds_endereco", true));
@@ -156,16 +258,6 @@ namespace ProjetoBancoDados
             this.ds_enderecoTextBox.Name = "ds_enderecoTextBox";
             this.ds_enderecoTextBox.Size = new System.Drawing.Size(317, 26);
             this.ds_enderecoTextBox.TabIndex = 6;
-            // 
-            // nr_enderecoLabel
-            // 
-            nr_enderecoLabel.AutoSize = true;
-            nr_enderecoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nr_enderecoLabel.Location = new System.Drawing.Point(208, 203);
-            nr_enderecoLabel.Name = "nr_enderecoLabel";
-            nr_enderecoLabel.Size = new System.Drawing.Size(69, 20);
-            nr_enderecoLabel.TabIndex = 7;
-            nr_enderecoLabel.Text = "Número:";
             // 
             // nr_enderecoTextBox
             // 
@@ -177,16 +269,6 @@ namespace ProjetoBancoDados
             this.nr_enderecoTextBox.Size = new System.Drawing.Size(100, 26);
             this.nr_enderecoTextBox.TabIndex = 8;
             // 
-            // nm_bairroLabel
-            // 
-            nm_bairroLabel.AutoSize = true;
-            nm_bairroLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nm_bairroLabel.Location = new System.Drawing.Point(222, 233);
-            nm_bairroLabel.Name = "nm_bairroLabel";
-            nm_bairroLabel.Size = new System.Drawing.Size(55, 20);
-            nm_bairroLabel.TabIndex = 9;
-            nm_bairroLabel.Text = "Bairro:";
-            // 
             // nm_bairroTextBox
             // 
             this.nm_bairroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "nm_bairro", true));
@@ -196,16 +278,6 @@ namespace ProjetoBancoDados
             this.nm_bairroTextBox.Name = "nm_bairroTextBox";
             this.nm_bairroTextBox.Size = new System.Drawing.Size(317, 26);
             this.nm_bairroTextBox.TabIndex = 10;
-            // 
-            // nm_cidadeLabel
-            // 
-            nm_cidadeLabel.AutoSize = true;
-            nm_cidadeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nm_cidadeLabel.Location = new System.Drawing.Point(214, 263);
-            nm_cidadeLabel.Name = "nm_cidadeLabel";
-            nm_cidadeLabel.Size = new System.Drawing.Size(63, 20);
-            nm_cidadeLabel.TabIndex = 11;
-            nm_cidadeLabel.Text = "Cidade:";
             // 
             // nm_cidadeTextBox
             // 
@@ -217,16 +289,6 @@ namespace ProjetoBancoDados
             this.nm_cidadeTextBox.Size = new System.Drawing.Size(317, 26);
             this.nm_cidadeTextBox.TabIndex = 12;
             // 
-            // cd_cepLabel
-            // 
-            cd_cepLabel.AutoSize = true;
-            cd_cepLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cd_cepLabel.Location = new System.Drawing.Point(232, 295);
-            cd_cepLabel.Name = "cd_cepLabel";
-            cd_cepLabel.Size = new System.Drawing.Size(45, 20);
-            cd_cepLabel.TabIndex = 13;
-            cd_cepLabel.Text = "CEP:";
-            // 
             // cd_cepTextBox
             // 
             this.cd_cepTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_cep", true));
@@ -236,16 +298,6 @@ namespace ProjetoBancoDados
             this.cd_cepTextBox.Name = "cd_cepTextBox";
             this.cd_cepTextBox.Size = new System.Drawing.Size(196, 26);
             this.cd_cepTextBox.TabIndex = 14;
-            // 
-            // sg_estadoLabel
-            // 
-            sg_estadoLabel.AutoSize = true;
-            sg_estadoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sg_estadoLabel.Location = new System.Drawing.Point(397, 204);
-            sg_estadoLabel.Name = "sg_estadoLabel";
-            sg_estadoLabel.Size = new System.Drawing.Size(64, 20);
-            sg_estadoLabel.TabIndex = 15;
-            sg_estadoLabel.Text = "Estado:";
             // 
             // sg_estadoTextBox
             // 
@@ -257,16 +309,6 @@ namespace ProjetoBancoDados
             this.sg_estadoTextBox.Size = new System.Drawing.Size(51, 26);
             this.sg_estadoTextBox.TabIndex = 16;
             // 
-            // cd_telefoneLabel
-            // 
-            cd_telefoneLabel.AutoSize = true;
-            cd_telefoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cd_telefoneLabel.Location = new System.Drawing.Point(202, 326);
-            cd_telefoneLabel.Name = "cd_telefoneLabel";
-            cd_telefoneLabel.Size = new System.Drawing.Size(75, 20);
-            cd_telefoneLabel.TabIndex = 17;
-            cd_telefoneLabel.Text = "Telefone:";
-            // 
             // cd_telefoneTextBox
             // 
             this.cd_telefoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_telefone", true));
@@ -276,16 +318,6 @@ namespace ProjetoBancoDados
             this.cd_telefoneTextBox.Name = "cd_telefoneTextBox";
             this.cd_telefoneTextBox.Size = new System.Drawing.Size(196, 26);
             this.cd_telefoneTextBox.TabIndex = 18;
-            // 
-            // cd_cpfLabel
-            // 
-            cd_cpfLabel.AutoSize = true;
-            cd_cpfLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cd_cpfLabel.Location = new System.Drawing.Point(233, 356);
-            cd_cpfLabel.Name = "cd_cpfLabel";
-            cd_cpfLabel.Size = new System.Drawing.Size(44, 20);
-            cd_cpfLabel.TabIndex = 19;
-            cd_cpfLabel.Text = "CPF:";
             // 
             // cd_cpfTextBox
             // 
@@ -297,16 +329,6 @@ namespace ProjetoBancoDados
             this.cd_cpfTextBox.Size = new System.Drawing.Size(196, 26);
             this.cd_cpfTextBox.TabIndex = 20;
             // 
-            // cd_rgLabel
-            // 
-            cd_rgLabel.AutoSize = true;
-            cd_rgLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cd_rgLabel.Location = new System.Drawing.Point(239, 386);
-            cd_rgLabel.Name = "cd_rgLabel";
-            cd_rgLabel.Size = new System.Drawing.Size(38, 20);
-            cd_rgLabel.TabIndex = 21;
-            cd_rgLabel.Text = "RG:";
-            // 
             // cd_rgTextBox
             // 
             this.cd_rgTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_rg", true));
@@ -316,16 +338,6 @@ namespace ProjetoBancoDados
             this.cd_rgTextBox.Name = "cd_rgTextBox";
             this.cd_rgTextBox.Size = new System.Drawing.Size(196, 26);
             this.cd_rgTextBox.TabIndex = 22;
-            // 
-            // ds_emailLabel
-            // 
-            ds_emailLabel.AutoSize = true;
-            ds_emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ds_emailLabel.Location = new System.Drawing.Point(225, 416);
-            ds_emailLabel.Name = "ds_emailLabel";
-            ds_emailLabel.Size = new System.Drawing.Size(52, 20);
-            ds_emailLabel.TabIndex = 23;
-            ds_emailLabel.Text = "Email:";
             // 
             // ds_emailTextBox
             // 
@@ -340,126 +352,158 @@ namespace ProjetoBancoDados
             // btnAlterar
             // 
             this.btnAlterar.AutoSize = true;
+            this.btnAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnAlterar.Location = new System.Drawing.Point(488, 12);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(100, 30);
             this.btnAlterar.TabIndex = 33;
             this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.UseVisualStyleBackColor = false;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnSair
             // 
             this.btnSair.AutoSize = true;
+            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnSair.Location = new System.Drawing.Point(630, 58);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(100, 30);
             this.btnSair.TabIndex = 39;
             this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnExcluir
             // 
             this.btnExcluir.AutoSize = true;
+            this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnExcluir.Location = new System.Drawing.Point(630, 12);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(100, 30);
             this.btnExcluir.TabIndex = 34;
             this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnProximo
             // 
             this.btnProximo.AutoSize = true;
+            this.btnProximo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.btnProximo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnProximo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProximo.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnProximo.Location = new System.Drawing.Point(204, 12);
             this.btnProximo.Name = "btnProximo";
             this.btnProximo.Size = new System.Drawing.Size(100, 30);
             this.btnProximo.TabIndex = 31;
             this.btnProximo.Text = "Próximo";
-            this.btnProximo.UseVisualStyleBackColor = true;
+            this.btnProximo.UseVisualStyleBackColor = false;
             this.btnProximo.Click += new System.EventHandler(this.btnProximo_Click);
             // 
             // btnImprimir
             // 
             this.btnImprimir.AutoSize = true;
+            this.btnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnImprimir.Location = new System.Drawing.Point(488, 58);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(100, 30);
             this.btnImprimir.TabIndex = 38;
             this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.UseVisualStyleBackColor = false;
             // 
             // btnPesquisar
             // 
             this.btnPesquisar.AutoSize = true;
+            this.btnPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnPesquisar.Location = new System.Drawing.Point(346, 58);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(100, 30);
             this.btnPesquisar.TabIndex = 37;
             this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.UseVisualStyleBackColor = false;
             // 
             // btnCancelar
             // 
             this.btnCancelar.AutoSize = true;
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnCancelar.Location = new System.Drawing.Point(204, 58);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 30);
             this.btnCancelar.TabIndex = 36;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnNovo
             // 
             this.btnNovo.AutoSize = true;
+            this.btnNovo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovo.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnNovo.Location = new System.Drawing.Point(346, 12);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(100, 30);
             this.btnNovo.TabIndex = 32;
             this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.UseVisualStyleBackColor = false;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnSalvar
             // 
             this.btnSalvar.AutoSize = true;
+            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnSalvar.Location = new System.Drawing.Point(62, 58);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(100, 30);
             this.btnSalvar.TabIndex = 35;
             this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnAnterior
             // 
             this.btnAnterior.AutoSize = true;
+            this.btnAnterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.btnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAnterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnterior.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnAnterior.Location = new System.Drawing.Point(62, 12);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(100, 30);
             this.btnAnterior.TabIndex = 30;
             this.btnAnterior.Text = "Anterior";
-            this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.UseVisualStyleBackColor = false;
             this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
+            this.ClientSize = new System.Drawing.Size(800, 460);
+            this.ControlBox = false;
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnExcluir);
@@ -495,7 +539,7 @@ namespace ProjetoBancoDados
             this.Controls.Add(ds_emailLabel);
             this.Controls.Add(this.ds_emailTextBox);
             this.Name = "frmCliente";
-            this.Text = "frmCliente";
+            this.Text = "Cadastro de Clientes";
             this.Load += new System.EventHandler(this.frmCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cadastroDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbClienteBindingSource)).EndInit();
