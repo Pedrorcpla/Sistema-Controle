@@ -51,10 +51,7 @@ namespace ProjetoBancoDados
             this.nr_enderecoTextBox = new System.Windows.Forms.TextBox();
             this.nm_bairroTextBox = new System.Windows.Forms.TextBox();
             this.nm_cidadeTextBox = new System.Windows.Forms.TextBox();
-            this.cd_cepTextBox = new System.Windows.Forms.TextBox();
             this.sg_estadoTextBox = new System.Windows.Forms.TextBox();
-            this.cd_telefoneTextBox = new System.Windows.Forms.TextBox();
-            this.cd_cpfTextBox = new System.Windows.Forms.TextBox();
             this.cd_rgTextBox = new System.Windows.Forms.TextBox();
             this.ds_emailTextBox = new System.Windows.Forms.TextBox();
             this.btnAlterar = new System.Windows.Forms.Button();
@@ -67,6 +64,10 @@ namespace ProjetoBancoDados
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnAnterior = new System.Windows.Forms.Button();
+            this.tableAdapterManager = new ProjetoBancoDados.CadastroDataSetTableAdapters.TableAdapterManager();
+            this.cd_cpfMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.cd_cepMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.cd_telefoneMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             cd_clienteLabel = new System.Windows.Forms.Label();
             nm_clienteLabel = new System.Windows.Forms.Label();
             ds_enderecoLabel = new System.Windows.Forms.Label();
@@ -289,16 +290,6 @@ namespace ProjetoBancoDados
             this.nm_cidadeTextBox.Size = new System.Drawing.Size(317, 26);
             this.nm_cidadeTextBox.TabIndex = 12;
             // 
-            // cd_cepTextBox
-            // 
-            this.cd_cepTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_cep", true));
-            this.cd_cepTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cd_cepTextBox.Location = new System.Drawing.Point(283, 294);
-            this.cd_cepTextBox.MaxLength = 9;
-            this.cd_cepTextBox.Name = "cd_cepTextBox";
-            this.cd_cepTextBox.Size = new System.Drawing.Size(196, 26);
-            this.cd_cepTextBox.TabIndex = 14;
-            // 
             // sg_estadoTextBox
             // 
             this.sg_estadoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "sg_estado", true));
@@ -308,26 +299,6 @@ namespace ProjetoBancoDados
             this.sg_estadoTextBox.Name = "sg_estadoTextBox";
             this.sg_estadoTextBox.Size = new System.Drawing.Size(51, 26);
             this.sg_estadoTextBox.TabIndex = 16;
-            // 
-            // cd_telefoneTextBox
-            // 
-            this.cd_telefoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_telefone", true));
-            this.cd_telefoneTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cd_telefoneTextBox.Location = new System.Drawing.Point(283, 325);
-            this.cd_telefoneTextBox.MaxLength = 20;
-            this.cd_telefoneTextBox.Name = "cd_telefoneTextBox";
-            this.cd_telefoneTextBox.Size = new System.Drawing.Size(196, 26);
-            this.cd_telefoneTextBox.TabIndex = 18;
-            // 
-            // cd_cpfTextBox
-            // 
-            this.cd_cpfTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_cpf", true));
-            this.cd_cpfTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cd_cpfTextBox.Location = new System.Drawing.Point(283, 355);
-            this.cd_cpfTextBox.MaxLength = 14;
-            this.cd_cpfTextBox.Name = "cd_cpfTextBox";
-            this.cd_cpfTextBox.Size = new System.Drawing.Size(196, 26);
-            this.cd_cpfTextBox.TabIndex = 20;
             // 
             // cd_rgTextBox
             // 
@@ -497,13 +468,55 @@ namespace ProjetoBancoDados
             this.btnAnterior.UseVisualStyleBackColor = false;
             this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.tbClienteTableAdapter = this.tbClienteTableAdapter;
+            this.tableAdapterManager.tbFornecedorTableAdapter = null;
+            this.tableAdapterManager.tbProdutoTableAdapter = null;
+            this.tableAdapterManager.tbUsuarioTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = ProjetoBancoDados.CadastroDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // cd_cpfMaskedTextBox
+            // 
+            this.cd_cpfMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_cpf", true));
+            this.cd_cpfMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cd_cpfMaskedTextBox.Location = new System.Drawing.Point(283, 353);
+            this.cd_cpfMaskedTextBox.Mask = "000,000,000-00";
+            this.cd_cpfMaskedTextBox.Name = "cd_cpfMaskedTextBox";
+            this.cd_cpfMaskedTextBox.Size = new System.Drawing.Size(196, 26);
+            this.cd_cpfMaskedTextBox.TabIndex = 40;
+            // 
+            // cd_cepMaskedTextBox
+            // 
+            this.cd_cepMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_cep", true));
+            this.cd_cepMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cd_cepMaskedTextBox.Location = new System.Drawing.Point(283, 293);
+            this.cd_cepMaskedTextBox.Mask = "00000-000";
+            this.cd_cepMaskedTextBox.Name = "cd_cepMaskedTextBox";
+            this.cd_cepMaskedTextBox.Size = new System.Drawing.Size(196, 26);
+            this.cd_cepMaskedTextBox.TabIndex = 41;
+            // 
+            // cd_telefoneMaskedTextBox
+            // 
+            this.cd_telefoneMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_telefone", true));
+            this.cd_telefoneMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cd_telefoneMaskedTextBox.Location = new System.Drawing.Point(283, 323);
+            this.cd_telefoneMaskedTextBox.Mask = "(00) 00000-0000";
+            this.cd_telefoneMaskedTextBox.Name = "cd_telefoneMaskedTextBox";
+            this.cd_telefoneMaskedTextBox.Size = new System.Drawing.Size(196, 26);
+            this.cd_telefoneMaskedTextBox.TabIndex = 42;
+            // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(800, 460);
+            this.ClientSize = new System.Drawing.Size(800, 461);
             this.ControlBox = false;
+            this.Controls.Add(this.cd_telefoneMaskedTextBox);
+            this.Controls.Add(this.cd_cepMaskedTextBox);
+            this.Controls.Add(this.cd_cpfMaskedTextBox);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnExcluir);
@@ -527,13 +540,10 @@ namespace ProjetoBancoDados
             this.Controls.Add(nm_cidadeLabel);
             this.Controls.Add(this.nm_cidadeTextBox);
             this.Controls.Add(cd_cepLabel);
-            this.Controls.Add(this.cd_cepTextBox);
             this.Controls.Add(sg_estadoLabel);
             this.Controls.Add(this.sg_estadoTextBox);
             this.Controls.Add(cd_telefoneLabel);
-            this.Controls.Add(this.cd_telefoneTextBox);
             this.Controls.Add(cd_cpfLabel);
-            this.Controls.Add(this.cd_cpfTextBox);
             this.Controls.Add(cd_rgLabel);
             this.Controls.Add(this.cd_rgTextBox);
             this.Controls.Add(ds_emailLabel);
@@ -559,10 +569,7 @@ namespace ProjetoBancoDados
         private System.Windows.Forms.TextBox nr_enderecoTextBox;
         private System.Windows.Forms.TextBox nm_bairroTextBox;
         private System.Windows.Forms.TextBox nm_cidadeTextBox;
-        private System.Windows.Forms.TextBox cd_cepTextBox;
         private System.Windows.Forms.TextBox sg_estadoTextBox;
-        private System.Windows.Forms.TextBox cd_telefoneTextBox;
-        private System.Windows.Forms.TextBox cd_cpfTextBox;
         private System.Windows.Forms.TextBox cd_rgTextBox;
         private System.Windows.Forms.TextBox ds_emailTextBox;
         private System.Windows.Forms.Button btnAlterar;
@@ -575,5 +582,9 @@ namespace ProjetoBancoDados
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnAnterior;
+        private CadastroDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.MaskedTextBox cd_cpfMaskedTextBox;
+        private System.Windows.Forms.MaskedTextBox cd_cepMaskedTextBox;
+        private System.Windows.Forms.MaskedTextBox cd_telefoneMaskedTextBox;
     }
 }
