@@ -66,6 +66,72 @@ namespace ProjetoBancoDados
             ((System.ComponentModel.ISupportInitialize)(this.tbProdutoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // cd_produtoLabel
+            // 
+            cd_produtoLabel.AutoSize = true;
+            cd_produtoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cd_produtoLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            cd_produtoLabel.Location = new System.Drawing.Point(233, 152);
+            cd_produtoLabel.Name = "cd_produtoLabel";
+            cd_produtoLabel.Size = new System.Drawing.Size(63, 20);
+            cd_produtoLabel.TabIndex = 60;
+            cd_produtoLabel.Text = "Código:";
+            // 
+            // nm_produtoLabel
+            // 
+            nm_produtoLabel.AutoSize = true;
+            nm_produtoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nm_produtoLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            nm_produtoLabel.Location = new System.Drawing.Point(241, 184);
+            nm_produtoLabel.Name = "nm_produtoLabel";
+            nm_produtoLabel.Size = new System.Drawing.Size(55, 20);
+            nm_produtoLabel.TabIndex = 62;
+            nm_produtoLabel.Text = "Nome:";
+            // 
+            // nm_categoriaLabel
+            // 
+            nm_categoriaLabel.AutoSize = true;
+            nm_categoriaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nm_categoriaLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            nm_categoriaLabel.Location = new System.Drawing.Point(214, 216);
+            nm_categoriaLabel.Name = "nm_categoriaLabel";
+            nm_categoriaLabel.Size = new System.Drawing.Size(82, 20);
+            nm_categoriaLabel.TabIndex = 64;
+            nm_categoriaLabel.Text = "Categoria:";
+            // 
+            // qt_estoqueLabel
+            // 
+            qt_estoqueLabel.AutoSize = true;
+            qt_estoqueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            qt_estoqueLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            qt_estoqueLabel.Location = new System.Drawing.Point(114, 248);
+            qt_estoqueLabel.Name = "qt_estoqueLabel";
+            qt_estoqueLabel.Size = new System.Drawing.Size(182, 20);
+            qt_estoqueLabel.TabIndex = 66;
+            qt_estoqueLabel.Text = "Quantidade no Estoque:";
+            // 
+            // vl_custoLabel
+            // 
+            vl_custoLabel.AutoSize = true;
+            vl_custoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            vl_custoLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            vl_custoLabel.Location = new System.Drawing.Point(178, 280);
+            vl_custoLabel.Name = "vl_custoLabel";
+            vl_custoLabel.Size = new System.Drawing.Size(118, 20);
+            vl_custoLabel.TabIndex = 68;
+            vl_custoLabel.Text = "Valor de Custo:";
+            // 
+            // vl_vendaLabel
+            // 
+            vl_vendaLabel.AutoSize = true;
+            vl_vendaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            vl_vendaLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            vl_vendaLabel.Location = new System.Drawing.Point(173, 312);
+            vl_vendaLabel.Name = "vl_vendaLabel";
+            vl_vendaLabel.Size = new System.Drawing.Size(123, 20);
+            vl_vendaLabel.TabIndex = 70;
+            vl_vendaLabel.Text = "Valor de Venda:";
+            // 
             // btnAlterar
             // 
             this.btnAlterar.AutoSize = true;
@@ -153,6 +219,7 @@ namespace ProjetoBancoDados
             this.btnPesquisar.TabIndex = 57;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnCancelar
             // 
@@ -237,17 +304,6 @@ namespace ProjetoBancoDados
             this.tableAdapterManager.tbUsuarioTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = ProjetoBancoDados.CadastroDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // cd_produtoLabel
-            // 
-            cd_produtoLabel.AutoSize = true;
-            cd_produtoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cd_produtoLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
-            cd_produtoLabel.Location = new System.Drawing.Point(233, 152);
-            cd_produtoLabel.Name = "cd_produtoLabel";
-            cd_produtoLabel.Size = new System.Drawing.Size(63, 20);
-            cd_produtoLabel.TabIndex = 60;
-            cd_produtoLabel.Text = "Código:";
-            // 
             // cd_produtoTextBox
             // 
             this.cd_produtoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbProdutoBindingSource, "cd_produto", true));
@@ -258,17 +314,6 @@ namespace ProjetoBancoDados
             this.cd_produtoTextBox.Name = "cd_produtoTextBox";
             this.cd_produtoTextBox.Size = new System.Drawing.Size(100, 26);
             this.cd_produtoTextBox.TabIndex = 61;
-            // 
-            // nm_produtoLabel
-            // 
-            nm_produtoLabel.AutoSize = true;
-            nm_produtoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nm_produtoLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
-            nm_produtoLabel.Location = new System.Drawing.Point(241, 184);
-            nm_produtoLabel.Name = "nm_produtoLabel";
-            nm_produtoLabel.Size = new System.Drawing.Size(55, 20);
-            nm_produtoLabel.TabIndex = 62;
-            nm_produtoLabel.Text = "Nome:";
             // 
             // nm_produtoTextBox
             // 
@@ -281,17 +326,6 @@ namespace ProjetoBancoDados
             this.nm_produtoTextBox.Size = new System.Drawing.Size(288, 26);
             this.nm_produtoTextBox.TabIndex = 63;
             // 
-            // nm_categoriaLabel
-            // 
-            nm_categoriaLabel.AutoSize = true;
-            nm_categoriaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nm_categoriaLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
-            nm_categoriaLabel.Location = new System.Drawing.Point(214, 216);
-            nm_categoriaLabel.Name = "nm_categoriaLabel";
-            nm_categoriaLabel.Size = new System.Drawing.Size(82, 20);
-            nm_categoriaLabel.TabIndex = 64;
-            nm_categoriaLabel.Text = "Categoria:";
-            // 
             // nm_categoriaTextBox
             // 
             this.nm_categoriaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbProdutoBindingSource, "nm_categoria", true));
@@ -303,17 +337,6 @@ namespace ProjetoBancoDados
             this.nm_categoriaTextBox.Size = new System.Drawing.Size(288, 26);
             this.nm_categoriaTextBox.TabIndex = 65;
             // 
-            // qt_estoqueLabel
-            // 
-            qt_estoqueLabel.AutoSize = true;
-            qt_estoqueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            qt_estoqueLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
-            qt_estoqueLabel.Location = new System.Drawing.Point(114, 248);
-            qt_estoqueLabel.Name = "qt_estoqueLabel";
-            qt_estoqueLabel.Size = new System.Drawing.Size(182, 20);
-            qt_estoqueLabel.TabIndex = 66;
-            qt_estoqueLabel.Text = "Quantidade no Estoque:";
-            // 
             // qt_estoqueTextBox
             // 
             this.qt_estoqueTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbProdutoBindingSource, "qt_estoque", true));
@@ -324,28 +347,6 @@ namespace ProjetoBancoDados
             this.qt_estoqueTextBox.Name = "qt_estoqueTextBox";
             this.qt_estoqueTextBox.Size = new System.Drawing.Size(100, 26);
             this.qt_estoqueTextBox.TabIndex = 67;
-            // 
-            // vl_custoLabel
-            // 
-            vl_custoLabel.AutoSize = true;
-            vl_custoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            vl_custoLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
-            vl_custoLabel.Location = new System.Drawing.Point(178, 280);
-            vl_custoLabel.Name = "vl_custoLabel";
-            vl_custoLabel.Size = new System.Drawing.Size(118, 20);
-            vl_custoLabel.TabIndex = 68;
-            vl_custoLabel.Text = "Valor de Custo:";
-            // 
-            // vl_vendaLabel
-            // 
-            vl_vendaLabel.AutoSize = true;
-            vl_vendaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            vl_vendaLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
-            vl_vendaLabel.Location = new System.Drawing.Point(173, 312);
-            vl_vendaLabel.Name = "vl_vendaLabel";
-            vl_vendaLabel.Size = new System.Drawing.Size(123, 20);
-            vl_vendaLabel.TabIndex = 70;
-            vl_vendaLabel.Text = "Valor de Venda:";
             // 
             // vl_custoTextBox
             // 

@@ -187,5 +187,18 @@ namespace ProjetoBancoDados
         {
             Close();
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            int cod, reg;
+            frmPesquisaFornecedor fpf = new frmPesquisaFornecedor();
+            fpf.ShowDialog();
+            cod = fpf.getCodigo();
+            if (cod >= 0)
+            {
+                reg = tbFornecedorBindingSource.Find("cd_fornecedor", cod);
+                tbFornecedorBindingSource.Position = reg;
+            }
+        }
     }
 }

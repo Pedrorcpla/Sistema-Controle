@@ -179,5 +179,18 @@ namespace ProjetoBancoDados
             tbClienteBindingSource.CancelEdit();
             Desabilita();
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            int cod, reg;
+            frmPesquisaCliente fpc = new frmPesquisaCliente();
+            fpc.ShowDialog();
+            cod = fpc.getCodigo();
+            if (cod >= 0)
+            {
+                reg = tbClienteBindingSource.Find("cd_cliente", cod);
+                tbClienteBindingSource.Position = reg;
+            }
+        }
     }
 }

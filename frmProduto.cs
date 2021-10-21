@@ -106,5 +106,18 @@ namespace ProjetoBancoDados
         {
             Close();
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            int cod, reg;
+            frmPesquisaProduto fpp = new frmPesquisaProduto();
+            fpp.ShowDialog();
+            cod = fpp.getCodigo();
+            if (cod >= 0)
+            {
+                reg = tbProdutoBindingSource.Find("cd_produto", cod);
+                tbProdutoBindingSource.Position = reg;
+            }
+        }
     }
 }

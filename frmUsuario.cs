@@ -104,5 +104,17 @@ namespace ProjetoBancoDados
             tbUsuarioBindingSource.CancelEdit();
             Desabilita();
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            int cod, reg;
+            frmPesquisaUsuario fpu = new frmPesquisaUsuario();
+            fpu.ShowDialog();
+            cod = fpu.getCodigo();
+            if (cod >= 0) {
+                reg = tbUsuarioBindingSource.Find("cd_usuario", cod);
+                tbUsuarioBindingSource.Position = reg;
+            }                
+        }
     }
 }
