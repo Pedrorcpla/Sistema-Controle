@@ -32,7 +32,6 @@ namespace ProjetoBancoDados
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label cd_produtoLabel;
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.cadastroDataSet = new ProjetoBancoDados.CadastroDataSet();
             this.tbFornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -63,23 +62,9 @@ namespace ProjetoBancoDados
             this.txtNome.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtNome.Location = new System.Drawing.Point(104, 29);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(547, 26);
+            this.txtNome.Size = new System.Drawing.Size(653, 26);
             this.txtNome.TabIndex = 69;
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.AutoSize = true;
-            this.btnPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnPesquisar.Location = new System.Drawing.Point(657, 27);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(100, 30);
-            this.btnPesquisar.TabIndex = 67;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = false;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // btnSair
             // 
@@ -152,7 +137,6 @@ namespace ProjetoBancoDados
             this.Controls.Add(this.btnSair);
             this.Controls.Add(cd_produtoLabel);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.btnPesquisar);
             this.Name = "frmPesquisaFornecedor";
             this.Text = "Pesquisa de Fornecedor";
             this.Load += new System.EventHandler(this.frmPesquisaFornecedor_Load);
@@ -167,7 +151,6 @@ namespace ProjetoBancoDados
         #endregion
 
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnSair;
         private CadastroDataSet cadastroDataSet;
         private System.Windows.Forms.BindingSource tbFornecedorBindingSource;

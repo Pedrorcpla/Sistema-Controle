@@ -29,18 +29,6 @@ namespace ProjetoBancoDados
 
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            if(txtNome.Text == "")
-            {
-                this.tbProdutoTableAdapter.Fill(this.cadastroDataSet.tbProduto);
-            }
-            else
-            {
-                this.tbProdutoTableAdapter.FillByNomeProd(this.cadastroDataSet.tbProduto, "%" + txtNome.Text + "%");
-            }
-        }
-
         private void tbProdutoDataGridView_DoubleClick(object sender, EventArgs e)
         {
             codigo = Convert.ToInt32(tbProdutoDataGridView.CurrentRow.Cells[0].Value);
@@ -51,6 +39,18 @@ namespace ProjetoBancoDados
         {
             codigo = 0;
             Close();
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNome.Text == "")
+            {
+                this.tbProdutoTableAdapter.Fill(this.cadastroDataSet.tbProduto);
+            }
+            else
+            {
+                this.tbProdutoTableAdapter.FillByNomeProd(this.cadastroDataSet.tbProduto, "%" + txtNome.Text + "%");
+            }
         }
     }
 }
