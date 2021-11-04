@@ -116,5 +116,25 @@ namespace ProjetoBancoDados
                 tbUsuarioBindingSource.Position = reg;
             }                
         }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            string strDados;
+            Graphics objImpressao = e.Graphics;
+
+            strDados = "FICHA DE USUÁRIO" + (char)10 + (char)10;
+            strDados = strDados + "Código: " + cd_usuarioTextBox.Text + (char)10 + (char)10;
+            strDados = strDados + "Nome: " + nm_usuarioTextBox.Text + (char)10 + (char)10;
+            strDados = strDados + "Nível: " + sg_nivelTextBox.Text + (char)10 + (char)10;
+            strDados = strDados + "Login: " + nm_loginTextBox.Text;
+            
+            objImpressao.DrawString(strDados, new System.Drawing.Font("Arial", 12, FontStyle.Bold), Brushes.Black, 50, 50);
+            objImpressao.DrawLine(new System.Drawing.Pen(Brushes.Black, 1), 50, 80, 780, 80);
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.ShowDialog();
+        }
     }
 }

@@ -36,6 +36,7 @@ namespace ProjetoBancoDados
             System.Windows.Forms.Label qt_estoqueLabel;
             System.Windows.Forms.Label vl_custoLabel;
             System.Windows.Forms.Label vl_vendaLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProduto));
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -56,6 +57,8 @@ namespace ProjetoBancoDados
             this.qt_estoqueTextBox = new System.Windows.Forms.TextBox();
             this.vl_custoTextBox = new System.Windows.Forms.TextBox();
             this.vl_vendaTextBox = new System.Windows.Forms.TextBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             cd_produtoLabel = new System.Windows.Forms.Label();
             nm_produtoLabel = new System.Windows.Forms.Label();
             nm_categoriaLabel = new System.Windows.Forms.Label();
@@ -205,6 +208,7 @@ namespace ProjetoBancoDados
             this.btnImprimir.TabIndex = 58;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnPesquisar
             // 
@@ -368,6 +372,21 @@ namespace ProjetoBancoDados
             this.vl_vendaTextBox.Size = new System.Drawing.Size(100, 26);
             this.vl_vendaTextBox.TabIndex = 73;
             // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // frmProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -428,5 +447,7 @@ namespace ProjetoBancoDados
         private System.Windows.Forms.TextBox qt_estoqueTextBox;
         private System.Windows.Forms.TextBox vl_custoTextBox;
         private System.Windows.Forms.TextBox vl_vendaTextBox;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

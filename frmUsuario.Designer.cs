@@ -35,6 +35,7 @@ namespace ProjetoBancoDados
             System.Windows.Forms.Label sg_nivelLabel;
             System.Windows.Forms.Label nm_loginLabel;
             System.Windows.Forms.Label cd_senhaLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuario));
             this.cd_usuarioTextBox = new System.Windows.Forms.TextBox();
             this.tbUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cadastroDataSet = new ProjetoBancoDados.CadastroDataSet();
@@ -53,6 +54,8 @@ namespace ProjetoBancoDados
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnAnterior = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             cd_usuarioLabel = new System.Windows.Forms.Label();
             nm_usuarioLabel = new System.Windows.Forms.Label();
             sg_nivelLabel = new System.Windows.Forms.Label();
@@ -260,6 +263,7 @@ namespace ProjetoBancoDados
             this.btnImprimir.TabIndex = 28;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnPesquisar
             // 
@@ -341,6 +345,21 @@ namespace ProjetoBancoDados
             this.btnAnterior.UseVisualStyleBackColor = false;
             this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // frmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -398,5 +417,7 @@ namespace ProjetoBancoDados
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnAnterior;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

@@ -46,6 +46,7 @@ namespace ProjetoBancoDados
             System.Windows.Forms.Label sg_tipoLabel;
             System.Windows.Forms.Label ds_emailLabel;
             System.Windows.Forms.Label nm_contatoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFornecedor));
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -76,6 +77,8 @@ namespace ProjetoBancoDados
             this.ds_emailTextBox = new System.Windows.Forms.TextBox();
             this.nm_contatoTextBox = new System.Windows.Forms.TextBox();
             this.cd_ieTextBox = new System.Windows.Forms.TextBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             cd_fornecedorLabel = new System.Windows.Forms.Label();
             nm_fornecedorLabel = new System.Windows.Forms.Label();
             ds_enderecoLabel = new System.Windows.Forms.Label();
@@ -345,6 +348,7 @@ namespace ProjetoBancoDados
             this.btnImprimir.TabIndex = 48;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnPesquisar
             // 
@@ -619,6 +623,21 @@ namespace ProjetoBancoDados
             this.cd_ieTextBox.Size = new System.Drawing.Size(164, 26);
             this.cd_ieTextBox.TabIndex = 82;
             // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // frmFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -709,5 +728,7 @@ namespace ProjetoBancoDados
         private System.Windows.Forms.TextBox ds_emailTextBox;
         private System.Windows.Forms.TextBox nm_contatoTextBox;
         private System.Windows.Forms.TextBox cd_ieTextBox;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

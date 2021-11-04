@@ -192,5 +192,32 @@ namespace ProjetoBancoDados
                 tbClienteBindingSource.Position = reg;
             }
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            string strDados;
+            Graphics objImpressao = e.Graphics;
+
+            strDados = "FICHA DE CLIENTE" + (char)10 + (char)10;
+            strDados = strDados + "Código: " + cd_clienteTextBox.Text + (char)10 + (char)10;
+            strDados = strDados + "Nome: " + nm_clienteTextBox.Text + (char)10 + (char)10;
+            strDados = strDados + "Endereço: " + ds_enderecoTextBox.Text + (char)10 + (char)10;
+            strDados = strDados + "Bairro: " + nm_bairroTextBox.Text;
+            strDados = strDados + "Cidade: " + nm_cidadeTextBox.Text + (char)10 + (char)10;
+            strDados = strDados + "Estado: " + sg_estadoTextBox.Text + (char)10 + (char)10;
+            strDados = strDados + "CEP: " + cd_cepMaskedTextBox.Text + (char)10 + (char)10;
+            strDados = strDados + "Telefone: " + cd_telefoneMaskedTextBox.Text + (char)10 + (char)10;
+            strDados = strDados + "CPF: " + cd_cpfMaskedTextBox.Text + (char)10 + (char)10;
+            strDados = strDados + "RG: " + cd_rgTextBox.Text + (char)10 + (char)10;
+            strDados = strDados + "Email: " + ds_emailTextBox.Text + (char)10 + (char)10;
+
+            objImpressao.DrawString(strDados, new System.Drawing.Font("Arial", 12, FontStyle.Bold), Brushes.Black, 50, 50);
+            objImpressao.DrawLine(new System.Drawing.Pen(Brushes.Black, 1), 50, 80, 780, 80);
+        }
     }
 }

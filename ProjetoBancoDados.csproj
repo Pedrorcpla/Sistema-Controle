@@ -63,6 +63,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastroDataSet.cs">
+      <DependentUpon>CadastroDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CadastroDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -119,5 +119,27 @@ namespace ProjetoBancoDados
                 tbProdutoBindingSource.Position = reg;
             }
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            string strDados;
+            Graphics objImpressao = e.Graphics;
+
+            strDados = "FICHA DE PRODUTO" + (char)10 + (char)10;
+            strDados = strDados + "Código: " + cd_produtoTextBox.Text + (char)10 + (char)10;
+            strDados = strDados + "Nome: " + nm_produtoTextBox.Text + (char)10 + (char)10;
+            strDados = strDados + "Categoria: " + nm_categoriaTextBox.Text + (char)10 + (char)10;
+            strDados = strDados + "Quantidade: " + qt_estoqueTextBox.Text + (char)10 + (char)10;
+            strDados = strDados + "Valor de custo: " + vl_custoTextBox.Text + (char)10 + (char)10;
+            strDados = strDados + "Valor de venda: " + vl_vendaTextBox.Text;
+
+            objImpressao.DrawString(strDados, new System.Drawing.Font("Arial", 12, FontStyle.Bold), Brushes.Black, 50, 50);
+            objImpressao.DrawLine(new System.Drawing.Pen(Brushes.Black, 1), 50, 80, 780, 80);
+        }
     }
 }

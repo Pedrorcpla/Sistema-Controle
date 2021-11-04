@@ -42,6 +42,7 @@ namespace ProjetoBancoDados
             System.Windows.Forms.Label cd_cpfLabel;
             System.Windows.Forms.Label cd_rgLabel;
             System.Windows.Forms.Label ds_emailLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
             this.cadastroDataSet = new ProjetoBancoDados.CadastroDataSet();
             this.tbClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbClienteTableAdapter = new ProjetoBancoDados.CadastroDataSetTableAdapters.tbClienteTableAdapter();
@@ -68,6 +69,8 @@ namespace ProjetoBancoDados
             this.cd_cpfMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.cd_cepMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.cd_telefoneMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             cd_clienteLabel = new System.Windows.Forms.Label();
             nm_clienteLabel = new System.Windows.Forms.Label();
             ds_enderecoLabel = new System.Windows.Forms.Label();
@@ -393,6 +396,7 @@ namespace ProjetoBancoDados
             this.btnImprimir.TabIndex = 38;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnPesquisar
             // 
@@ -508,6 +512,21 @@ namespace ProjetoBancoDados
             this.cd_telefoneMaskedTextBox.Size = new System.Drawing.Size(196, 26);
             this.cd_telefoneMaskedTextBox.TabIndex = 42;
             // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -587,5 +606,7 @@ namespace ProjetoBancoDados
         private System.Windows.Forms.MaskedTextBox cd_cpfMaskedTextBox;
         private System.Windows.Forms.MaskedTextBox cd_cepMaskedTextBox;
         private System.Windows.Forms.MaskedTextBox cd_telefoneMaskedTextBox;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
