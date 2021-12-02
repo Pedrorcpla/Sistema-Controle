@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace ProjetoBancoDados
 {
@@ -15,6 +16,10 @@ namespace ProjetoBancoDados
         public frmPrincipal()
         {
             InitializeComponent();
+            SlashScreen splash = new SlashScreen();
+            splash.Show();
+            Thread.Sleep(3000);
+            splash.Close();
         }
 
         private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -25,7 +30,7 @@ namespace ProjetoBancoDados
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Close();
         }
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -44,6 +49,24 @@ namespace ProjetoBancoDados
         {
             frmProduto fp = new frmProduto();
             fp.ShowDialog();
+        }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 ab = new AboutBox1();
+            ab.ShowDialog();
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            if (frmLogin.nivel != "1")
+            {
+                usuárioToolStripMenuItem.Enabled = false;
+            }
+            else 
+            {
+                usuárioToolStripMenuItem.Enabled = true;   
+            }
         }
     }
 }
