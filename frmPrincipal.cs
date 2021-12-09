@@ -15,6 +15,7 @@ namespace ProjetoBancoDados
     {
         public frmPrincipal()
         {
+            //Projeto feito por Pedro Nascimento
             InitializeComponent();
             SlashScreen splash = new SlashScreen();
             splash.Show();
@@ -67,6 +68,30 @@ namespace ProjetoBancoDados
             {
                 usuárioToolStripMenuItem.Enabled = true;   
             }
+        }
+
+        private void usuárioToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmRelatorioUsu ru = new frmRelatorioUsu();
+            ru.ShowDialog();
+        }
+
+        private void clienteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmRelatorioCli rc = new frmRelatorioCli();
+            rc.ShowDialog();
+        }
+
+        private void fornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRelatorioFornecedor rf = new frmRelatorioFornecedor();
+            rf.ShowDialog();
+        }
+
+        private void produtosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmRelatorioProduto rp = new frmRelatorioProduto();
+            rp.ShowDialog();
         }
     }
 }

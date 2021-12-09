@@ -91,7 +91,6 @@ namespace ProjetoBancoDados
             this.labelProductName.TabIndex = 19;
             this.labelProductName.Text = "Sistema de Cadastro";
             this.labelProductName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelProductName.Click += new System.EventHandler(this.labelProductName_Click);
             // 
             // labelVersion
             // 
@@ -172,7 +171,6 @@ namespace ProjetoBancoDados
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AboutBox1";
-            this.Load += new System.EventHandler(this.AboutBox1_Load);
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();

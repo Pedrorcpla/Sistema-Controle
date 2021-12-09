@@ -48,6 +48,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
@@ -131,6 +149,30 @@
     <Compile Include="frmProduto.Designer.cs">
       <DependentUpon>frmProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRelatorioCli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorioCli.Designer.cs">
+      <DependentUpon>frmRelatorioCli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatorioFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorioFornecedor.Designer.cs">
+      <DependentUpon>frmRelatorioFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatorioProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorioProduto.Designer.cs">
+      <DependentUpon>frmRelatorioProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatorioUsu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorioUsu.Designer.cs">
+      <DependentUpon>frmRelatorioUsu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +187,7 @@
     <Compile Include="SlashScreen.Designer.cs">
       <DependentUpon>SlashScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +218,18 @@
     <EmbeddedResource Include="frmProduto.resx">
       <DependentUpon>frmProduto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorioCli.resx">
+      <DependentUpon>frmRelatorioCli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorioFornecedor.resx">
+      <DependentUpon>frmRelatorioFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorioProduto.resx">
+      <DependentUpon>frmRelatorioProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorioUsu.resx">
+      <DependentUpon>frmRelatorioUsu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUsuario.resx">
       <DependentUpon>frmUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +243,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReportCliente.rdlc" />
+    <EmbeddedResource Include="ReportFornecedor.rdlc" />
+    <EmbeddedResource Include="ReportProduto.rdlc" />
+    <EmbeddedResource Include="ReportUsuario.rdlc" />
     <EmbeddedResource Include="SlashScreen.resx">
       <DependentUpon>SlashScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,6 +261,7 @@
     <None Include="CadastroDataSet.xss">
       <DependentUpon>CadastroDataSet.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -222,6 +282,19 @@
     <Content Include="Cadastro_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Cadastro.mdf</DependentUpon>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="loading.jpeg" />
     <None Include="loading.png" />

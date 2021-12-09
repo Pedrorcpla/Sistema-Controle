@@ -98,14 +98,5 @@ namespace ProjetoBancoDados
         }
         #endregion
 
-        private void AboutBox1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelProductName_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -57,15 +57,6 @@ namespace ProjetoBancoDados
             login.TabIndex = 67;
             login.Text = "Login:";
             // 
-            // txtLogin
-            // 
-            this.txtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogin.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtLogin.Location = new System.Drawing.Point(259, 122);
-            this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(294, 26);
-            this.txtLogin.TabIndex = 68;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -77,12 +68,22 @@ namespace ProjetoBancoDados
             label1.TabIndex = 69;
             label1.Text = "Senha:";
             // 
+            // txtLogin
+            // 
+            this.txtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogin.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtLogin.Location = new System.Drawing.Point(259, 122);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(294, 26);
+            this.txtLogin.TabIndex = 68;
+            // 
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtSenha.Location = new System.Drawing.Point(259, 170);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(294, 26);
             this.txtSenha.TabIndex = 70;
             // 
