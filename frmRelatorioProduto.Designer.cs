@@ -30,19 +30,40 @@ namespace ProjetoBancoDados
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.Windows.Forms.Label titulo;
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.tbProdutoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CadastroDataSet = new ProjetoBancoDados.CadastroDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tbFornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbFornecedorTableAdapter = new ProjetoBancoDados.CadastroDataSetTableAdapters.tbFornecedorTableAdapter();
-            this.tbProdutoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbProdutoTableAdapter = new ProjetoBancoDados.CadastroDataSetTableAdapters.tbProdutoTableAdapter();
             titulo = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.tbProdutoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CadastroDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbFornecedorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbProdutoBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tbProdutoBindingSource
+            // 
+            this.tbProdutoBindingSource.DataMember = "tbProduto";
+            this.tbProdutoBindingSource.DataSource = this.CadastroDataSet;
+            // 
+            // CadastroDataSet
+            // 
+            this.CadastroDataSet.DataSetName = "CadastroDataSet";
+            this.CadastroDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // titulo
+            // 
+            titulo.AutoSize = true;
+            titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            titulo.ForeColor = System.Drawing.SystemColors.ControlLight;
+            titulo.Location = new System.Drawing.Point(184, 9);
+            titulo.Name = "titulo";
+            titulo.Size = new System.Drawing.Size(229, 25);
+            titulo.TabIndex = 5;
+            titulo.Text = "Relatório de Produto";
             // 
             // reportViewer1
             // 
@@ -56,11 +77,6 @@ namespace ProjetoBancoDados
             this.reportViewer1.Size = new System.Drawing.Size(564, 379);
             this.reportViewer1.TabIndex = 0;
             // 
-            // CadastroDataSet
-            // 
-            this.CadastroDataSet.DataSetName = "CadastroDataSet";
-            this.CadastroDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tbFornecedorBindingSource
             // 
             this.tbFornecedorBindingSource.DataMember = "tbFornecedor";
@@ -69,22 +85,6 @@ namespace ProjetoBancoDados
             // tbFornecedorTableAdapter
             // 
             this.tbFornecedorTableAdapter.ClearBeforeFill = true;
-            // 
-            // titulo
-            // 
-            titulo.AutoSize = true;
-            titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            titulo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            titulo.Location = new System.Drawing.Point(184, 9);
-            titulo.Name = "titulo";
-            titulo.Size = new System.Drawing.Size(229, 25);
-            titulo.TabIndex = 5;
-            titulo.Text = "Relatório de Produto";
-            // 
-            // tbProdutoBindingSource
-            // 
-            this.tbProdutoBindingSource.DataMember = "tbProduto";
-            this.tbProdutoBindingSource.DataSource = this.CadastroDataSet;
             // 
             // tbProdutoTableAdapter
             // 
@@ -99,11 +99,11 @@ namespace ProjetoBancoDados
             this.Controls.Add(titulo);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmRelatorioProduto";
-            this.Text = "frmRelatorioProduto";
+            this.Text = "Relatório de Produtos";
             this.Load += new System.EventHandler(this.frmRelatorioProduto_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tbProdutoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CadastroDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbFornecedorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbProdutoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

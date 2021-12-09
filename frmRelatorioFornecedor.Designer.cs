@@ -30,42 +30,26 @@ namespace ProjetoBancoDados
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.Windows.Forms.Label titulo;
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.CadastroDataSet = new ProjetoBancoDados.CadastroDataSet();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.tbFornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CadastroDataSet = new ProjetoBancoDados.CadastroDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tbFornecedorTableAdapter = new ProjetoBancoDados.CadastroDataSetTableAdapters.tbFornecedorTableAdapter();
             titulo = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.CadastroDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbFornecedorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CadastroDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            reportDataSource3.Name = "DadosFornecedor";
-            reportDataSource3.Value = this.tbFornecedorBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProjetoBancoDados.ReportFornecedor.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 50);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(563, 388);
-            this.reportViewer1.TabIndex = 0;
-            // 
-            // CadastroDataSet
-            // 
-            this.CadastroDataSet.DataSetName = "CadastroDataSet";
-            this.CadastroDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tbFornecedorBindingSource
             // 
             this.tbFornecedorBindingSource.DataMember = "tbFornecedor";
             this.tbFornecedorBindingSource.DataSource = this.CadastroDataSet;
             // 
-            // tbFornecedorTableAdapter
+            // CadastroDataSet
             // 
-            this.tbFornecedorTableAdapter.ClearBeforeFill = true;
+            this.CadastroDataSet.DataSetName = "CadastroDataSet";
+            this.CadastroDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // titulo
             // 
@@ -78,6 +62,22 @@ namespace ProjetoBancoDados
             titulo.TabIndex = 4;
             titulo.Text = "Relatório de Fornecedor";
             // 
+            // reportViewer1
+            // 
+            reportDataSource1.Name = "DadosFornecedor";
+            reportDataSource1.Value = this.tbFornecedorBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProjetoBancoDados.ReportFornecedor.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(12, 50);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(563, 388);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // tbFornecedorTableAdapter
+            // 
+            this.tbFornecedorTableAdapter.ClearBeforeFill = true;
+            // 
             // frmRelatorioFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -87,10 +87,10 @@ namespace ProjetoBancoDados
             this.Controls.Add(titulo);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmRelatorioFornecedor";
-            this.Text = "frmRelatorioFornecedor";
+            this.Text = "Relatório de Fornecedor";
             this.Load += new System.EventHandler(this.frmRelatorioFornecedor_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.CadastroDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbFornecedorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CadastroDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -30,42 +30,26 @@ namespace ProjetoBancoDados
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.Windows.Forms.Label titulo;
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.CadastroDataSet = new ProjetoBancoDados.CadastroDataSet();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.tbClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CadastroDataSet = new ProjetoBancoDados.CadastroDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tbClienteTableAdapter = new ProjetoBancoDados.CadastroDataSetTableAdapters.tbClienteTableAdapter();
             titulo = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.CadastroDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbClienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CadastroDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            reportDataSource4.Name = "DadosCliente";
-            reportDataSource4.Value = this.tbClienteBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProjetoBancoDados.ReportCliente.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 50);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(565, 388);
-            this.reportViewer1.TabIndex = 0;
-            // 
-            // CadastroDataSet
-            // 
-            this.CadastroDataSet.DataSetName = "CadastroDataSet";
-            this.CadastroDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tbClienteBindingSource
             // 
             this.tbClienteBindingSource.DataMember = "tbCliente";
             this.tbClienteBindingSource.DataSource = this.CadastroDataSet;
             // 
-            // tbClienteTableAdapter
+            // CadastroDataSet
             // 
-            this.tbClienteTableAdapter.ClearBeforeFill = true;
+            this.CadastroDataSet.DataSetName = "CadastroDataSet";
+            this.CadastroDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // titulo
             // 
@@ -78,6 +62,22 @@ namespace ProjetoBancoDados
             titulo.TabIndex = 3;
             titulo.Text = "Relatório de Clientes";
             // 
+            // reportViewer1
+            // 
+            reportDataSource1.Name = "DadosCliente";
+            reportDataSource1.Value = this.tbClienteBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProjetoBancoDados.ReportCliente.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(12, 50);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(565, 388);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // tbClienteTableAdapter
+            // 
+            this.tbClienteTableAdapter.ClearBeforeFill = true;
+            // 
             // frmRelatorioCli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -87,10 +87,10 @@ namespace ProjetoBancoDados
             this.Controls.Add(titulo);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmRelatorioCli";
-            this.Text = "frmRelatorioCli";
+            this.Text = "Relatório de Clientes";
             this.Load += new System.EventHandler(this.frmRelatorioCli_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.CadastroDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbClienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CadastroDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
